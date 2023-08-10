@@ -8,6 +8,7 @@ public class BankingSystem {
         String name = keyboard.nextLine();
         String customerId = keyboard.nextLine();
         BankAccount obj1 = new BankAccount(name, customerId);
-        //obj1.menu();
+        obj1.menu();
+        keyboard.close();
     }
 }
