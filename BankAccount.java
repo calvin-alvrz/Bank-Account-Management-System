@@ -9,4 +9,11 @@ public class BankAccount {
         this.customerName = customerName;
         this.customerId = customerId;
     }
+
+    void deposit(double amount){
+        if(amount != 0){
+            balance += amount;
+            prevTrans = amount;
+        }
+    }
 }
