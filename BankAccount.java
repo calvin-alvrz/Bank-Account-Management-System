@@ -16,4 +16,14 @@ public class BankAccount {
             prevTrans = amount;
         }
     }
+
+    void withdraw(double amt){
+        if(amt != 0 && balance >= amt){
+            balance -= amt;
+            prevTrans =- amt;
+        }
+        else if(balance < amt){
+            System.out.println("Bank balance insufficient");
+        }
+    }
 }
