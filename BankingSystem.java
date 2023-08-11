@@ -4,13 +4,27 @@ public class BankingSystem {
 
     public static void main(String[] args) {
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("Please enter your \'Name\'' and \'Customer ID\'' to access your bank account");
-        System.out.println("Name:");
+
+        System.out.println("-----------------------------------------");
+        System.out.println("        Welcome to Banking System");
+        System.out.println("-----------------------------------------\n");
+        System.out.println("Please enter your name:");
         String name = keyboard.nextLine();
-        System.out.println("Customer ID (e.g. 123123)");
-        String customerId = keyboard.nextLine();
-        BankAccount obj1 = new BankAccount(name, customerId);
-        obj1.menu();
+
+        while (true) {
+            System.out.println("Customer ID:");
+            String customerId = keyboard.nextLine();
+
+            if (customerId.length() == 6) {
+                BankAccount obj1 = new BankAccount(name, customerId);
+                obj1.menu();
+                break;
+            }
+            else {
+                System.out.println("\nPlease enter a correct ID number (e.g. #000000).\n");
+            }
+        }
+
         keyboard.close();
     }
 }
