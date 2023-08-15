@@ -21,7 +21,7 @@ public class BankingSystem {
                 break;
             }
             else {
-                System.out.println("\nPlease enter a correct ID number (e.g. #000000).\n");
+                System.out.println("\nPlease enter a correct ID number with 6 digits(e.g. #000000).\n");
             }
         }
 
